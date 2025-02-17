@@ -8,14 +8,16 @@
         <Title>Traced Service Collection Extensions</Title>
         <Authors>Evoluzione</Authors>
         <Description>Provides extension methods for adding traced services to the IServiceCollection.</Description>
-        <RepositoryUrl></RepositoryUrl>
+        <RepositoryUrl>https://github.com/evoluzione/traced-service-collection</RepositoryUrl>
         <PackageTags>Diagnostics, Telemetry, Tracing, Observability</PackageTags>
         <Copyright>Evoluzione Telematica srl</Copyright>
         <PackageIcon>getsitelogo.jpg</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageReleaseNotes>First release</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <Version>1.0.1</Version>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
