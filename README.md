@@ -1,15 +1,12 @@
 # Traced Service Collection
-==========================
 
 A library for tracing method calls in services registered with the Microsoft.Extensions.DependencyInjection framework.
 
 ## Overview
-------------
 
 This library provides extension methods for adding traced services to the `IServiceCollection`. It uses a proxy class to intercept method calls and log tracing information.
 
 ## Usage
------
 
 To use this library, add the `Evoluzione.TracedServiceCollection` NuGet package to your project.
 
@@ -56,12 +53,10 @@ public void ConfigureServices(IServiceCollection services)
 This will add the `TracedServiceCollection` source to the OpenTelemetry tracing.
 
 ## Internals
-------------
 
 The library uses a proxy class, `TracingProxy<T>`, to intercept method calls and log tracing information. The proxy class is created using the `DispatchProxy` class from the `System.Reflection` namespace.
 
 
 ## Acknowledgments
----------------
 
 This library was created by Evoluzione Telematica srl.
