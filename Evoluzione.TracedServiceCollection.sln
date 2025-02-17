@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evoluzione.TracedServiceCollection", "Evoluzione.TracedServiceCollection.csproj", "{AA1118A6-D19A-4858-B884-26F0DEE0E856}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evoluzione.TracedServiceCollection", "Evoluzione.TracedServiceCollection\Evoluzione.TracedServiceCollection.csproj", "{AA1118A6-D19A-4858-B884-26F0DEE0E856}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

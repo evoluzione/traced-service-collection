@@ -8,9 +8,26 @@
         <Title>Traced Service Collection Extensions</Title>
         <Authors>Evoluzione</Authors>
         <Description>Provides extension methods for adding traced services to the IServiceCollection.</Description>
-        <RepositoryUrl>https://github.com/evoluzione/traced-service-collection</RepositoryUrl>
+        <RepositoryUrl></RepositoryUrl>
         <PackageTags>Diagnostics, Telemetry, Tracing, Observability</PackageTags>
+        <Copyright>Evoluzione Telematica srl</Copyright>
+        <PackageIcon>getsitelogo.jpg</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReleaseNotes>First release</PackageReleaseNotes>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\getsitelogo.jpg">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
