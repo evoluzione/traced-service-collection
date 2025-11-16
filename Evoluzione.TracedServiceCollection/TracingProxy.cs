@@ -4,6 +4,14 @@ using System.Reflection;
 namespace Evoluzione.TracedServiceCollection;
 
 /// <summary>
+/// Static holder for the ActivitySource to ensure it's shared across all proxy instances.
+/// </summary>
+internal static class TracingActivitySource
+{
+	public static readonly ActivitySource Instance = new("TracedServiceCollection");
+}
+
+/// <summary>
 /// A proxy class that traces method calls for a specified type.
 /// </summary>
 /// <typeparam name="T">The type of the service being proxied.</typeparam>
@@ -14,7 +22,6 @@ public class TracingProxy<T> : DispatchProxy
 	/// </summary>
 	public T Decorated { get; set; } = default!;
 
-	private readonly ActivitySource _activitySource = new("TracedServiceCollection");
 
 	/// <summary>
 	/// Invokes the specified method on the proxied service and traces the method call.
@@ -31,7 +38,7 @@ public class TracingProxy<T> : DispatchProxy
 
 		var methodName = targetMethod.Name;
 
-		using var activity = _activitySource.StartActivity(methodName);
+		using var activity = TracingActivitySource.Instance.StartActivity(methodName);
 
 		activity?.SetTag("method", methodName);
 
