@@ -25,10 +25,17 @@ jobs:
       run: dotnet build Evoluzione.TracedServiceCollection/Evoluzione.TracedServiceCollection.csproj -c Release --no-restore
       
     - name: Pack
-      run: dotnet pack Evoluzione.TracedServiceCollection/Evoluzione.TracedServiceCollection.csproj -c Release --no-build --output ./artifacts
+      run: dotnet pack Evoluzione.TracedServiceCollection/Evoluzione.TracedServiceCollection.csproj -c Release --output ./artifacts
       
     - name: Publish to NuGet
-      run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: |
+        $nupkg = Get-ChildItem -Path ./artifacts -Filter *.nupkg | Select-Object -First 1
+        if ($nupkg) {
+          dotnet nuget push $nupkg.FullName --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        } else {
+          Write-Error "No .nupkg file found in ./artifacts/"
+          exit 1
+        }
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
       
