@@ -13,26 +13,28 @@
         <Copyright>Evoluzione Telematica srl</Copyright>
         <PackageIcon>getsitelogo.jpg</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>First release</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.1.0: Added support for Keyed Services, Hosted Services, TryAdd methods, self-registration, and factory overloads for all lifetimes.</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>git</RepositoryType>
-        <Version>1.0.1</Version>
+        <Version>1.1.0</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
-      <None Include="..\getsitelogo.jpg">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-      <None Include="..\README.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
+        <None Include="..\getsitelogo.jpg">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.1" />
     </ItemGroup>
 
 </Project>
+
